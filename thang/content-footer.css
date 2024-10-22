@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* content-footer-container */
+body {
+    h2 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .btn-new {
+        text-align: center;
+    }
+
+    .btn-new a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #0066CC;
+        padding: 10px 48px;
+        border: none;
+        border-radius: 7px;
+        transition: background-color 0.3s;
+        transition: transform 0.3s;
+        border: 1px solid #0066CC;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        max-width: 300px;
+        width: 250px;
+        height: 40px;
+    }
+
+    .btn-new i {
+        margin-left: 8px;
+        font-weight: bold;
+    }
+
+    .btn-new a:hover {
+        transform: scale(1.05);
+        background-color: #0066CC;
+        color: white;
+
+    }
+
+}
+
+
+
+/* content-footer */
+.content-footer {
+    display: flex;
+    padding: 20px;
+    background-color: #f8f8f8;
+    max-width: 1000px;
+    margin: 0 auto;
+    cursor: pointer;
+
+    .picture {
+        text-align: center;
+        margin: 1rem;
+        max-width: 1500px;
+        height: 300px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+            .title {
+                margin-top: 10px;
+                font-size: 16px;
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+    }
+
+    .picture img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    .picture:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* register */
+.register {
+    margin-top: 100px;
+    text-align: center;
+
+    .title-header {
+        h3 {
+            font-size: 26px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-bottom: 10px;
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+    }
+
+    .form-register {
+
+        margin-top: 20px;
+
+        input {
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        button {}
+    }
+}
+
+/* end */
