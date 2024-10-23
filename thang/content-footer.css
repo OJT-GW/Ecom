@@ -30,6 +30,7 @@ body {
         max-width: 300px;
         width: 250px;
         height: 40px;
+        margin-top: 10px;
     }
 
     .btn-new i {
@@ -45,9 +46,6 @@ body {
     }
 
 }
-
-
-
 /* content-footer */
 .content-footer {
     display: flex;
@@ -102,7 +100,7 @@ body {
     .title-header {
         h3 {
             font-size: 26px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
             padding-bottom: 10px;
         }
 
@@ -116,13 +114,43 @@ body {
         margin-top: 20px;
 
         input {
-            width: 400px;
-            height: 30px;
-            font-size: 15px;
-            margin-left: 10px;
+
+            height: 40px;
+            border-radius: 40px 0 0 40px;
+            font-size: 13px;
+            line-height: 20px;
+            padding: 10px 0 10px 24px;
+            color: #515154;
+            width: 100%;
+            border: unset;
+            max-width: 470px;
+            padding-left: 20px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
-        button {}
+        button {
+            width: 100px;
+            border-radius: 20px;
+            height: 40px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+            background-color: #0066CC;
+            color: white;
+
+        }
+
+        button:hover {
+            background-color: #1781eb;
+            cursor: pointer;
+            transition: transform 0.3s;
+
+        
+        }
+
+        
     }
 }
 
