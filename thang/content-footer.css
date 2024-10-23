@@ -46,7 +46,6 @@ body {
     }
 
 }
-
 /* content-footer */
 .content-footer {
     display: flex;
@@ -115,6 +114,7 @@ body {
         margin-top: 20px;
 
         input {
+
             height: 40px;
             border-radius: 40px 0 0 40px;
             font-size: 13px;
@@ -147,7 +147,10 @@ body {
             cursor: pointer;
             transition: transform 0.3s;
 
+        
         }
+
+        
     }
 }
 
