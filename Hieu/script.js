@@ -1,34 +1,4 @@
-fetch("header.html")
-  .then((response) => {
-    if (!response.ok) throw new Error("Network response was not ok");
-    return response.text();
-  })
-  .then((data) => (document.getElementById("header").innerHTML = data))
-  .catch((error) => console.log("Error loading header:", error));
-
-fetch("footer.html")
-  .then((response) => {
-    if (!response.ok) throw new Error("Network response was not ok");
-    return response.text();
-  })
-  .then((data) => (document.getElementById("footer").innerHTML = data))
-  .catch((error) => console.log("Error loading footer:", error));
-
-fetch("Hieu/slide.html")
-  .then((response) => {
-    if (!response.ok) throw new Error("Network response was not ok");
-    return response.text();
-  })
-  .then((data) => {
-    document.getElementById("slide").innerHTML = data;
-    const script = document.createElement("script");
-    script.src = "Hieu/script.js";
-    script.onload = () => console.log("script.js loaded successfully");
-    script.onerror = () => console.log("Error loading script.js");
-    document.body.appendChild(script);
-  })
-  .catch((error) => console.log("Error loading slide:", error));
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.carousel-item');
     const indicators = document.querySelectorAll('.indicator');
     let currentSlide = 0;
