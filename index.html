@@ -742,11 +742,249 @@
 </head>
 
 <body>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        background-color: gr;
+        padding: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .accessory-section {
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+    }
+    
+    .accessory-items {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    
+    .item {
+        text-align: center;
+        width: 22%;
+    }
+    
+    .item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    /* Hiệu ứng khi hover vào item */
+    .hover-item:hover {
+        /* transform: translateY(-10px); Khi hover, đẩy item lên một chút */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng bóng đổ */
+    }
+    
+    
+    /* Hình ảnh "Mới" */
+    .new-label {
+        position: absolute;
+        top: 5px; /* Điều chỉnh khoảng cách từ cạnh trên */
+        right: 5px; /* Điều chỉnh khoảng cách từ cạnh phải */
+        width: 30px; /* Kích thước nhãn nhỏ hơn */
+        height: auto; /* Để chiều cao tự động dựa trên chiều rộng */
+        z-index: 1; /* Đảm bảo nhãn nằm trên sản phẩm */
+    }
+    
+    /* Phần tử cha cần có position: relative để định vị chính xác nhãn */
+    .item {
+        position: relative;
+        overflow: hidden; /* Đảm bảo phần tử con không tràn ra ngoài */
+    }
+    
+    .price {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    .current-price {
+        color: #0070c9;
+        font-weight: bold;
+    }
+    
+    .old-price {
+        text-decoration: line-through;
+        margin-left: 10px;
+    }
+    
+    /* Nút mặc định: chữ xanh, nền trắng */
+    .view-all-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 12px 50px;
+        background-color: white;
+        color: #0070c9;
+        border: 2px solid #0070c9;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu mượt */
+    }
+    /* Khi đưa trỏ chuột vào: chữ trắng, nền xanh */
+    .view-all-btn:hover {
+        background-color: #0070c9;
+        color: white;
+    }
+    
+    .view-all-btn:hover {
+        background-color: #005bb5;
+    }
+    
+    .business-promotion img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .promo-text {
+        width: 45%;
+    }
+    
+    .promo-text h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .promo-text ul {
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+    
+    .promo-text ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    .view-more-btn {
+        padding: 10px 20px;
+        background-color: #0070c9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .view-more-btn:hover {
+        background-color: #005bb5;
+    }
+    /* CSS Responsive */
+    
+    /* Màn hình nhỏ (dưới 768px) */
+    @media (max-width: 768px) {
+        .accessory-items {
+            flex-direction: column; /* Sắp xếp các item theo cột */
+            align-items: center;
+        }
+    
+        .item {
+            width: 90%; /* Chiếm gần hết chiều ngang màn hình khi màn hình nhỏ */
+        }
+    
+        h2 {
+            font-size: 24px;
+        }
+    
+        .view-all-btn, .view-more-btn {
+            width: 90%; /* Tăng chiều rộng của nút */
+        }
+    
+        .promo-text {
+            width: 100%;
+        }
+    
+        .promo-text h2 {
+            font-size: 20px;
+        }
+    }
+    
+    /* Màn hình trung bình (768px - 1024px) */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .item {
+            width: 45%; /* Điều chỉnh kích thước item vừa phải cho màn hình tablet */
+        }
+    
+        h2 {
+            font-size: 26px;
+        }
+    
+        .promo-text {
+            width: 80%;
+        }
+    }
+    
+    /* Màn hình lớn (trên 1024px) */
+    @media (min-width: 1024px) {
+        .item {
+            width: 22%; /* Kích thước chuẩn cho màn hình lớn */
+        }
+    
+        h2 {
+            font-size: 28px;
+        }
+    
+        .promo-text {
+            width: 45%;
+        }
+    }
+    
+    </style>
+    <section class="accessory-section">
+        <h1>Phụ kiện</h1>
+        <div class="accessory-items">
+            <div class="item hover-item">
+                <img id="airpods-image" alt="AirPods Pro 2">
+                <h3>AirPods Pro 2</h3>
+                <p class="price"><span class="current-price">4.990.000₫</span> <span class="old-price">6.700.000₫</span> -26%</p>
+            </div>
+            
+            <div class="item hover-item">
+                <img id="adapter-image" alt="Sạc 20W USB-C Power Adapter">
+                <h3>Sạc 20W USB-C Power Adapter</h3>
+                <p class="price"><span class="current-price">520.000₫</span> <span class="old-price">690.000₫</span> -24%</p>
+            </div>
+
+            <div class="item hover-item">
+                <img id="mouse-image" alt="Magic Mouse 2">
+                <h3>Magic Mouse 2</h3>
+                <p class="price"><span class="current-price">1.790.000₫</span> <span class="old-price">2.000.000₫</span> -40%</p>
+            </div>
+
+            <div class="item hover-item">
+                <img src="./anhPhuKien/new1.png" alt="new label" class="new-label">
+                <img id="pencil-image" alt="Apple Pencil Pro">
+                <h3>Apple Pencil Pro</h3>
+                <p class="price"><span class="current-price">3.399.000₫</span> <span class="old-price">3.490.000₫</span> -2%</p>
+            </div>
+        </div>
+        <button class="view-all-btn">Xem tất cả Phụ kiện ></button>
+
+    </section>
+    <section class="business-promotion">
+        <img id="promotion-image" alt="Apple for Business">
+    </section>
+
     <div id="body"></div>
+    
     <div id="footer"></div>
     <script src="app.js"></script>
 </body>
-
+<script src="./ManhJS/script.js"></script>
 
 </html>
 
