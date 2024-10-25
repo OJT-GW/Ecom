@@ -61,7 +61,7 @@
             padding: 0;
             align-items: center;
             gap: 70px;
-            margin-top:  -7%;
+            
             /* Adjusted spacing */
         }
 
@@ -252,6 +252,7 @@
 
         .user-menu {
             position: relative;
+            display: inline-block;
         }
 
         .user-dropdown {
@@ -263,6 +264,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
         }
 
         .user-menu:hover .user-dropdown {
@@ -281,6 +283,9 @@
         .dropdown-item:hover {
             color: blue;
         }
+        .dropdown-item:last-child {
+    border-bottom: none;
+}
 
         /* Responsive styles */
         @media (max-width: 1000px) {
@@ -591,12 +596,10 @@
             </div>
             <div class="user-menu">
                 <button class="icon-button">
-                    👤
+                    <i class="fa fa-user"></i>
                 </button>
                 <div class="user-dropdown" id="userDropdown">
-                    <div style="padding: 16px;">
-                        <p id="userName" style="font-weight: bold; margin: 0;">User Name</p>
-                    </div>
+
                     <a href="/sign-up" class="dropdown-item">Tạo tài khoản ngay</a>
                     <a href="/sign-in" class="dropdown-item">Đăng nhập</a>
                 </div>
@@ -736,6 +739,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+
+    </head>
+
+    
+
+    <body>
+        
     <style>
         /* Container styling */
         .s_container {
@@ -870,12 +880,6 @@
             swiper.slideTo(0, 1000); // Slide to the first slide with a 1-second transition
         }, 9000);
     </script>
-
-
-    <title>Shop Drunk Ver2</title>
-    </head>
-
-    <body>
         <style>
             * {
                 margin: 0;
@@ -886,7 +890,7 @@
 
             body {
                 background-color: gr;
-                padding: 20px;
+
             }
 
             h1 {
@@ -991,9 +995,11 @@
             }
 
             .business-promotion img {
-                width: 100%;
-                height: auto;
+                width: 65%;
+                display: flex;
+                margin: auto;
                 border-radius: 8px;
+                padding: auto;
             }
 
             .promo-text {
@@ -1204,7 +1210,7 @@ h2 {
 a {
     text-decoration: none;
     color: inherit;
-    margin-bottom: -12%;
+    
 }
 .product-card {
     position: relative;
@@ -1685,9 +1691,9 @@ function displayProducts(products, gridId) {
 displayProducts(iphoneProducts, 'iphone-grid');
 displayProducts(ipadProducts, 'ipad-grid');
 });
+    
 
         </script>
-
         <!-- Quan -->
         <div class="container-1">
             <!-- Mac Products Section -->
