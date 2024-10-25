@@ -1092,7 +1092,491 @@
                     width: 45%;
                 }
             }
+            /* Huy  */
+            .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center; 
+    font-size: 2rem; 
+    margin-bottom: 20px; 
+}
+
+h2 {
+    height: 40px; 
+    font-size: 1.2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    position: relative;  
+    border: 1px solid #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 110%;
+    width: 90%;
+}
+.product-card img{
+    margin: 0 auto;
+     display: block;
+}
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card a:hover {
+    opacity: 0.8; 
+    transform: scale(1.02); 
+    transition: transform 0.2s ease, opacity 0.2s ease; 
+}
+
+.price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0066CC;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.prices {
+    display: flex;
+    align-items: baseline; 
+    min-height: 30px;
+}
+
+.actual-price {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0066CC;
+}
+
+.original-price,
+.price-ratio {
+    color: #86868B;
+    margin: 0 10px 0 5px;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.view-all-btn-container {
+    text-align: center; 
+    margin-top: 100px;
+}
+
+.view-all-btn {
+    background-color: white; 
+    color: #0066CC; 
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #0066CC; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.view-all-btn:hover {
+    background-color: #0066CC;
+    color: white; 
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: -12%;
+}
+.product-card {
+    position: relative;
+}
+
+.in-stock {
+    position: absolute;
+    top: -10px; 
+    left: 300px;  
+    width: 100px;  
+    height: 100px;  
+    z-index: 1; 
+}
+
+
+.product_tag img {
+    max-width: 40%;  
+    height: auto;  
+    float: right;
+}
+.special-instock {
+    width: auto !important;
+    height: auto !important;
+    margin-left: 260px !important;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem; 
+    }
+    h2{
+        margin-bottom: 40px;
+    }
+    .product-card {
+        padding: 40px; 
+        max-width: 300px;
+        margin-bottom: -30%;    
+    }
+    .product-grid{
+        gap: 15%;
+    }
+    .prices {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .actual-price {
+        font-size: 18px; 
+    }
+
+    .original-price {
+        font-size: 15px; 
+    }
+    .price-ratio {
+        display: none;
+    .view-all-btn {
+        font-size: 14px; 
+        padding: 8px 16px; 
+        margin-top: 15%;
+    }
+
+    .in-stock {
+        width: 30px;
+    }
+
+    .product_tag img {
+        max-width: 50%;
+        float: right
+    }
+    .special-instock {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 160px !important;
+    }
+    #ipad-grid{
+        margin-top: 50%;
+    }
+}
+}   
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    .product-card {
+        height: auto; 
+    }
+
+    .prices {
+        margin-top: 10%;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .actual-price {
+        font-size: 16px; 
+        margin-left: 7px;
+    }
+
+    .original-price {
+        font-size: 14px; 
+        margin-left: 7px;
+    }
+
+    .price-ratio{
+        display: none;
+    }
+
+    .view-all-btn {
+        font-size: 12px; 
+        padding: 6px 12px;
+        margin-top: -40%;
+    }
+    .view-all-btn-container{
+        font-size: 12px; 
+        padding: 6px 12px; 
+        margin-top: 70%;
+        margin-bottom: -40%;
+    }
+
+    .in-stock {
+        width: 25px; 
+    }
+
+    .product_tag img {
+        width: 30%; 
+        float: right;
+    }
+    .special-instock {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 190px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    .product-card {
+        height: auto; 
+        width: auto;
+    }
+
+    .product-card img {
+        margin-right: 100px;
+    }
+    .product-grid{
+        gap: 3%;
+    }
+
+
+    .prices {
+        margin-top: 10%;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .actual-price {
+        font-size: 16px; 
+        margin-left: 7px;
+    }
+
+    .original-price {
+        font-size: 14px; 
+        margin-left: 7px;
+    }
+
+    .price-ratio{
+        display: none;
+    }
+
+    .view-all-btn {
+        font-size: 12px; 
+        padding: 6px 12px; 
+        margin-top: 40%;
+        margin-bottom: 40%;
+
+    }
+    .view-all-btn-container{
+        font-size: 12px; 
+        padding: 6px 12px; 
+        margin-bottom: -40%;
+    }
+
+    .in-stock {
+        width: 25px;
+    }
+
+    .product-tag{
+        max-width: auto;
+    }
+    .product_tag img {
+        display: block;
+    margin-left: auto; 
+        margin-bottom: 3%;
+    }
+    .special-instock {
+        width: auto !important;
+        height: auto !important;
+        margin-left: 160px !important;
+    }
+}
         </style>
+        <!-- Huy -->
+        <div class="container">
+            <section class="iphone-section">
+                <h1><a href="link-to-iphone" target="_blank">iPhone</a>            </h1>
+                <div class="product-grid" id="iphone-grid"></div>
+                <div class="view-all-btn-container">
+                    <button class="view-all-btn" onclick="location.href='link-to-all-iphones'">Xem tất cả iPhone <strong><i class="fas fa-chevron-right"></i></strong></button>
+                </div>
+            </section>
+            
+            <section class="ipad-section">
+                <h1><a href="link-to-iphone" target="_blank">Ipad</a></h1>
+                <div class="product-grid" id="ipad-grid"></div>
+                <div class="view-all-btn-container">
+                    <button class="view-all-btn" onclick="location.href='link-to-all-ipads'">Xem tất cả iPad <strong><i class="fas fa-chevron-right"></i></strong></button>
+                </div>
+            </section>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+const iphoneProducts = [
+    {
+        name: "iPhone 16 Pro Max 256GB",
+        price: "34.990.000₫",
+        originalPrice: "",
+        priceRatio: '',
+        imgSrc: "../HuyCSS/imageecom/iphone16promax.png",
+        link: "link-to-iphone16promax",
+        instock: "../HuyCSS/imageecom/in-stock.png"
+    },
+    {
+        name: "iPhone 16 128GB",
+        price: "22.990.000₫",
+        originalPrice: "",
+        priceRatio: '',
+        imgSrc: "../HuyCSS/imageecom/iphone16.png",
+        link: "link-to-iphone16-128gb",
+        instock: "../HuyCSS/imageecom/in-stock1.png"
+    },
+    {
+        name: "iPhone 16 Plus 128GB",
+        price: "25.990.000₫",
+        originalPrice: "",
+        priceRatio: '',
+        imgSrc: "../HuyCSS/imageecom/iphone16plus.png",
+        link: "link-to-iphone16-plus",
+        instock: "../HuyCSS/imageecom/in-stock1.png"
+    },
+    {
+        name: "iPhone 16 Pro 128GB",
+        price: "28.990.000₫",
+        originalPrice: "",
+        priceRatio: '',
+        imgSrc: "../HuyCSS/imageecom/iphone16pro.png",
+        link: "link-to-iphone16-pro", 
+        instock: "../HuyCSS/imageecom/in-stock.png" 
+    }
+];
+
+
+const ipadProducts = [
+    {
+        name: "iPad gen 9 10.2 inch WiFi 64GB",
+        price: "7.090.000₫",
+        originalPrice: "9.990.000₫",
+        priceRatio: '-29%',
+        imgSrc: "../HuyCSS/imageecom/ipadgen9.png",
+        link: "link-to-ipad-gen-9",
+        instock: "../HuyCSS/imageecom/in-stock4.png"
+    },
+    {
+        name: "iPad Gen 10 th 10.9 inch WiFi 64GB",
+        price: "9.390.000₫",
+        originalPrice: "12.990.000₫",
+        priceRatio: '-27%',
+        imgSrc: "../HuyCSS/imageecom/ipadgen10.png",
+        link: "link-to-ipad-gen-10",
+        instock: "../HuyCSS/imageecom/in-stock4.png"
+    },
+    {
+        name: "iPad Pro M4 11 inch Wi-Fi",
+        price: "27.690.000₫",
+        originalPrice: "28.990.000₫",
+        priceRatio: '-4%',
+        imgSrc: "../HuyCSS/imageecom/ipadprom4.jpeg",
+        link: "link-to-ipad-pro-m4",
+        instock: "../HuyCSS/imageecom/in-stock4.png"
+    },
+    {
+        name: "iPad Air 6 M2 13 inch Wi-Fi",
+        price: "21.990.000₫",
+        originalPrice: "",
+        priceRatio: '',
+        imgSrc: "../HuyCSS/imageecom/ipadair6.jpeg",
+        link: "link-to-ipad-air-6",
+        instock: "../HuyCSS/imageecom/in-stock3.png"
+    }
+];
+
+function displayProducts(products, gridId) {
+    const grid = document.getElementById(gridId);
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+
+        const img = document.createElement('img');
+        img.src = product.imgSrc;
+        img.alt = product.name;
+
+        if (product.instock) {
+            const productTag = document.createElement('div');
+            productTag.classList.add('product_tag');    
+        
+            const inStockImage = document.createElement('img');
+            inStockImage.src = product.instock; 
+            inStockImage.alt = ""; 
+
+         if (product.instock.includes('in-stock3.png')) {
+             inStockImage.classList.add('special-instock'); 
+           }   
+
+            
+        
+            productTag.appendChild(inStockImage);  
+            productCard.appendChild(productTag); 
+        }
+        imageContainer.appendChild(img);
+
+        const link = document.createElement('a');
+        link.href = product.link;
+        link.target = "_blank";
+        const title = document.createElement('h2');
+        title.textContent = product.name;
+
+        link.appendChild(imageContainer);
+        link.appendChild(title);
+
+        const priceDiv = document.createElement('div');
+        priceDiv.classList.add('prices');
+        const actualPrice = document.createElement('span');
+        actualPrice.classList.add('actual-price');
+        actualPrice.textContent = product.price;
+        const originalPrice = document.createElement('span');
+        originalPrice.classList.add('original-price');
+        originalPrice.textContent = product.originalPrice;
+        const priceRatio = document.createElement('span');
+        priceRatio.classList.add('price-ratio');
+        priceRatio.textContent = product.priceRatio;
+
+        priceDiv.appendChild(actualPrice);
+        priceDiv.appendChild(originalPrice);
+        priceDiv.appendChild(priceRatio);
+
+        productCard.appendChild(link);
+        productCard.appendChild(priceDiv);
+        grid.appendChild(productCard);
+    });
+}
+
+displayProducts(iphoneProducts, 'iphone-grid');
+displayProducts(ipadProducts, 'ipad-grid');
+});
+
+        </script>
+
+        <!-- Manh -->
         <section class="accessory-section">
             <h1>Phụ kiện</h1>
             <div class="accessory-items">
